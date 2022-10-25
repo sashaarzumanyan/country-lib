@@ -45,7 +45,7 @@ const Header = () => {
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title to="/">Where is the world ?</Title>
+          <Title to="/">HOME</Title>
           <ModeSwitcher onClick={toggleTheme}>
             {theme === 'light' ? (
               <IoSunnyOutline size="18px" />

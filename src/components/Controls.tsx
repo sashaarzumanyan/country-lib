@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { handleSearch } from '../helpers/dataControl';
 import { useAppDispatch } from '../hooks/redux';
 import { setSearchConf } from '../store/slice/configs';
 import { CustomSelect } from './CustomSelect';
@@ -31,17 +30,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const Controls = ({onSearch}: {onSearch: (search: string, region: string ) => any}) => {
+const Controls = () => {
   const dispatch = useAppDispatch();
   const [value, setValue] = useState('');
-  const [continent, setContinent] = useState(options[0]);
-
-  const searchConf = {search: value, region: continent?.value};
+  const [continent, setContinent] = useState<any>();
 
   useEffect(() => {
-    dispatch(setSearchConf({searchValue: value, region: continent?.value}));
-    handleSearch(searchConf, );
-  }, [value, continent, dispatch, onSearch]);
+      dispatch(setSearchConf({searchValue: value, region: continent?.value}));
+  }, [value, continent, dispatch]);
   
 
   const handleChange = (option: any) => {

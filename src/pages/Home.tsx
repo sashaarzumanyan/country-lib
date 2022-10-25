@@ -1,31 +1,22 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Card } from '../components/Card';
 import Controls from '../components/Controls';
 import { List } from '../components/List';
+import { dataFilter } from '../helpers/dataControl';
+import { useAppSelector } from '../hooks/redux';
 import { ICountry } from '../ts/interfaces/ICountry';
 
 const Home = ({countries}: {countries: ICountry[]}) => {
-  const [filtredCountries, setFiltredCountries] = useState(countries);
-  // debugger;
+  const [filtredCountries, setFiltredCountries] = useState<ICountry[]>(countries);
+  const {searchValue, selectedRegion} = useAppSelector(state => state.configs);
   const { push } = useHistory();
+  const searchConf = useCallback(() => ({search: searchValue, region: selectedRegion}),[searchValue, selectedRegion]);
 
-  // const handleSearch = (search: string, region: string) => {
+  useEffect(() => {
+    dataFilter(searchConf(), setFiltredCountries, countries);
+  },[countries, searchConf]);
 
-  //   // eslint-disable-next-line prefer-const
-  //   // let data = countries? [...filtredCountries]: [];
-    
-  //   if(region){
-  //     // debugger
-  //     data = data.filter((elem) => elem.region.includes(region));
-  //   };
-
-  //   if(search){
-  //     data = data.filter(elem => elem.name.toLowerCase().includes(search.toLowerCase()));
-  //   };
-
-  //   setFiltredCountries(data);
-  // };
 
   return (
     <>

@@ -1,9 +1,10 @@
 import { ICountry } from '../ts/interfaces/ICountry';
 
-export const handleSearch =
+export const dataFilter =
     (
         serachConf: { search: string, region: string },
-        callback: (param: ICountry[]) => ICountry[],
+        callback: React.Dispatch<React.SetStateAction<ICountry[]>>,
+        // callback: (param: ICountry[]) => ICountry[],
         initialState: ICountry[]
     ) => {
         const { region, search } = serachConf;

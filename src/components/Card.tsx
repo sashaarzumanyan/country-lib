@@ -1,9 +1,9 @@
-import { MouseEventHandler } from 'react';
 import styled from 'styled-components';
+import { CardProps } from '../ts/UI/Card';
 
 const Wrapper = styled.article`
   border-radius: var(--radii);
-  background-color: car(--colors-ui-base);
+  background-color: var(--colors-ui-base);
   box-shadow: var(--shadow);
   cursor: pointer;
   overflow: hidden;
@@ -42,16 +42,6 @@ const CardListItem = styled.li`
     font-weight: var(--fw-bold);
   }
 `;
-
-interface CardProps {
-    img: string,
-    name: string,
-    info: {
-        title: string,
-        description: string
-    }[],
-    onClick: MouseEventHandler<HTMLElement>
-}
 
 export const Card: React.FC<CardProps> = ({ img, name, info = [], onClick }: CardProps) => {    
   return (
