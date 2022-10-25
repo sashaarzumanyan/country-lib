@@ -1,0 +1,27 @@
+{
+  "extends": ["react-app", "react-app/jest"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "error",
+    "prefer-const": "error",
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "always"],
+    "jsx-quotes": ["error", "prefer-double"]
+    // "import/order": [
+    //   "error",
+    //   {
+    //     "newline-between": "always-and-inside-groups",
+    //     "groups": [
+    //       "builtin",
+    //       "external",
+    //       "internal",
+    //       "parent",
+    //       "sibling",
+    //       "index",
+    //       "object",
+    //       "type"
+    //     ]
+    //   }
+    // ]
+  }
+}
