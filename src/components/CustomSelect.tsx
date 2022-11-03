@@ -1,12 +1,6 @@
 import ReactSelect from 'react-select';
 import styled from 'styled-components';
 
-// interface SelectProps {
-//   Option = unknown,
-//   IsMulti extends boolean = false,
-//   Group extends GroupBase<Option> = GroupBase<Option>
-// }
-
 
 export const CustomSelect = styled(ReactSelect).attrs({
   styles: {

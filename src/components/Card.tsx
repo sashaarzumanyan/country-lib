@@ -25,7 +25,7 @@ const CardBody = styled.div`
 const CardTitle = styled.h3`
   margin: 0;
   font-size: var(--fs-md);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-normal);
 `;
 
 const CardList = styled.ul`

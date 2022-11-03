@@ -10,13 +10,17 @@ export const countryApi = createApi({
         url: 'all?fields=name,flags,capital,population,region'
       }),
     }),
-    // getByRegion: builder.query<ICountry[], string>({
-    //   query: (region) => ({
-    //     url: `region/${region}`
-    //   })
-    // })
+    getSingleCountry: builder.query<ICountry[] | null, string>({
+      query: (name) => ({
+        url: `name/${name}`
+      })
+    }),
+    getByCode: builder.query<ICountry[], string[]>({
+      query: (borders) => ({
+        url: `alpha?codes=${borders.join(',')}`
+      })
+    })
   }),
 });
 
-export const { useGetAllCountryQuery } = countryApi; 
-// export const {} = countryApi; 
+export const { useGetAllCountryQuery, useGetSingleCountryQuery, useGetByCodeQuery } = countryApi; 
