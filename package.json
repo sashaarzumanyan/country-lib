@@ -2,6 +2,7 @@
   "name": "demo-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sashaarzumanyan.github.io/country-lib",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,6 +15,7 @@
     "@types/react-redux": "^7.1.24",
     "@types/react-select": "^5.0.1",
     "@types/styled-components": "^5.1.26",
+    "dotenv": "^16.0.3",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,6 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
     "lint": "eslint -c .eslintrc --ext .ts,.tsx .",
     "lint:fix": "npm run lint -- --fix"
   },
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.186",
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "gh-pages": "^4.0.0"
   }
 }
