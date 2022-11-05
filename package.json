@@ -2,7 +2,7 @@
   "name": "demo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sashaarzumanyan.github.io/country-lib",
+  "homepage": "https://sashaarzumanyan.github.io/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
@@ -15,7 +15,6 @@
     "@types/react-redux": "^7.1.24",
     "@types/react-select": "^5.0.1",
     "@types/styled-components": "^5.1.26",
-    "dotenv": "^16.0.3",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
